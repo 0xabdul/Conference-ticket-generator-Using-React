@@ -19,12 +19,20 @@ function App() {
   const [nobrowse,setnobrowse]=useState(true);
   const [browse,setbrowse]=useState(false);
   const [code,setcode]=useState('');
+
+  const ticket = ()=>{
+    return Math.floor(Math.random()*100000);
+    }
+  
   const click = (e) =>{
      e.preventDefault();
       if(!fil){
         seter('please upload');
         return;
       }
+      const newcode = ticket();
+      setcode(newcode);
+    
       setshow(false);
       setnotshow(true);
       setblock(false);
@@ -44,11 +52,6 @@ function App() {
       if(li){
         setpre(URL.createObjectURL(li))
       }
-       const ticket = ()=>{
-      return Math.floor(Math.random()*100000);
-    }
-    const newcode = ticket();
-    setcode(newcode);
     }
 
     const reset =() =>{
