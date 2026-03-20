@@ -21,7 +21,7 @@ function App() {
   const [code,setcode]=useState('');
 
   const ticket = ()=>{
-    return Math.floor(Math.random()*100000);
+  return Math.floor(10000 + Math.random() * 90000);
     }
   
   const click = (e) =>{
